@@ -137,19 +137,23 @@ def acampamento_goblim():
 
 
 def castelo():
-    print("ao chegar ao castelo, você vê uma explosão na porta")
+    print("ao chegar ao castelo, você ve guardas feridos!")
     
-    print("1 - para entrar")
+    print("1 - entrar no castelo")
+    print("2 - ajudar os guardas primeiro")
 
     opcao = int(input("o que você faz?: "))
     print("-" * 50)
 
     if opcao == 1:
-        print("você descobre que o rei só tinha colocado um garfo no micro-ondas, mas estão todos bem")
-        return None
+        print("Você deixa os guardas de lado para ver o Rei primeiro!")
 
+    elif opcao == 2:
+        print("Você ajuda os guardas é entra no castelo")
+    
     else:
         print("opção não encontrada!")
+        
 
 #TELA INICIAL
 while True:
