@@ -21,6 +21,36 @@ def casa_do_heroi():
         print("você tem que escolher alguma coisa!")
         return False
 
+def caverna(tem_ovo):
+    print("-" * 50)
+    print("você encontrou uma caverna!")
+    print("na caverna tem um dragão!")
+    print("1 - enfrentar o dragão")
+    print("2 - pedir um ovo com gentileza")
+    print("3 - voltar")
+    print("-" * 50)
+
+    opcao = int(input("escolha: "))
+
+    if opcao == 1:
+        print("o dragão te devorou!")
+        print("você morreu!")
+        return None
+
+    elif opcao == 2:
+        print("o dragão te deu o ovo!")
+        print("-" * 50)
+        tem_ovo = True
+
+    elif opcao == 3:
+        print("você voltou para a floresta")
+        print("-" * 50)
+
+    return tem_ovo
+
+
+# INVENTÁRIO
+tem_ovo = False
 
 def ponte_em_um_penhasco(tem_ovo):
     print("-" * 50)
@@ -61,7 +91,7 @@ def acampamento_goblim():
     print("três goblins do acampamento passam por você segurando sacolas de dinheiro")
     print("1 - passa direto, ignorando-os")
     print("2 - pede dinheiro aos goblins")
-    print("3 - espanca os goblins e rouba o dinheiro deles")
+    print("3 - espancar um dos goblins e rouba a adaga dele")
     print("-" * 50)
     
     opcao = int(input("o que você vai fazer?: "))
@@ -116,45 +146,12 @@ def castelo():
 
     if opcao == 1:
         print("você descobre que o rei só tinha colocado um garfo no micro-ondas, mas estão todos bem")
-        exit()
+        return None
 
     else:
         print("opção não encontrada!")
 
-
-def caverna(tem_ovo):
-    print("-" * 50)
-    print("você encontrou uma caverna!")
-    print("na caverna tem um dragão!")
-    print("1 - enfrentar o dragão")
-    print("2 - pedir um ovo com gentileza")
-    print("3 - voltar")
-    print("-" * 50)
-
-    opcao = int(input("escolha: "))
-
-    if opcao == 1:
-        print("o dragão te derrotou!")
-        print("você morreu!")
-        return None
-
-    elif opcao == 2:
-        print("o dragão te deu o ovo!")
-        print("-" * 50)
-        tem_ovo = True
-
-    elif opcao == 3:
-        print("você voltou para a floresta")
-        print("-" * 50)
-
-    return tem_ovo
-
-
-# INVENTÁRIO
-tem_ovo = False
-
-
-# TELA INICIAL
+#TELA INICIAL
 while True:
 
     letreiro = """
