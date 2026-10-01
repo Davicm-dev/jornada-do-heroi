@@ -103,7 +103,6 @@ def acampamento_goblim():
     
     elif opcao == 2:
         print("os goblins te derrotaram!")
-        print("você morreu!")
         return False
 
     elif opcao == 3:
@@ -147,13 +146,34 @@ def castelo():
 
     if opcao == 1:
         print("Você deixa os guardas de lado para ver o Rei primeiro!")
+        print("-" * 50)
 
     elif opcao == 2:
         print("Você ajuda os guardas é entra no castelo")
-    
+        print("-" * 50)
+
     else:
         print("opção não encontrada!")
-        
+        return
+
+    print("Ao entrar na sala do trona o Rei te da uma missão")
+    print("A missão e, salvar a princesa no reino dos betas")
+    print("-" * 50)
+
+def a_aventura_começa():
+    print("com a missão dada")
+    print("-" * 50)
+    print("1 - salvar a princesa")
+    print("2 - ir para casa dormir por que o caminho  prara o castelo foi cansativo") 
+    opcao = int(input("o que você faz:"))
+    print("-" * 50)
+
+    if opcao == 1:
+        print("É hora de salve a princesa")
+    
+    elif opcao == 2:
+        print("to cansado vo para casa dormir")
+        exit()
 
 #TELA INICIAL
 while True:
@@ -184,6 +204,7 @@ while True:
     if opcao == 1:
         print("carregando...")
         print("-" * 50)
+        break
 
     elif opcao == 2:
         print("Obrigado por jogar!")
@@ -194,48 +215,48 @@ while True:
         continue
 
 
-    # COMEÇA A AVENTURA
-    if casa_do_heroi():
+# COMEÇA A AVENTURA
+if casa_do_heroi():
 
-        while True:
+    while True:
 
-            print("você está na floresta")
-            print("existem 2 caminhos:")
-            print("1 - para a esquerda")
-            print("2 - para a direita")
+        print("você está na floresta")
+        print("existem 2 caminhos:")
+        print("1 - para a esquerda")
+        print("2 - para a direita")
 
-            caminho = int(input("escolha: "))
+        caminho = int(input("escolha: "))
 
-            if caminho == 1:
+        if caminho == 1:
 
-                passou, tem_ovo = ponte_em_um_penhasco(tem_ovo)
+            passou, tem_ovo = ponte_em_um_penhasco(tem_ovo)
 
-                if passou:
-                    depois_da_ponte()
+            if passou:
+                depois_da_ponte()
 
-                    sobreviveu = acampamento_goblim()
+                sobreviveu = acampamento_goblim()
 
-                    if not sobreviveu:
-                        print("-" * 50)
-                        print("VOCÊ MORREU!")
-                        print("voltando para a tela inicial...")
-                        print("-" * 50)
-                        break
-
-                    castelo()
-
-
-            elif caminho == 2:
-
-                tem_ovo = caverna(tem_ovo)
-
-                if tem_ovo is None:
+                if not sobreviveu:
                     print("-" * 50)
                     print("VOCÊ MORREU!")
                     print("voltando para a tela inicial...")
                     print("-" * 50)
                     break
 
+                castelo()
+                
+                a_aventura_começa()
 
-            else:
-                print("não tem esse caminho!")
+        elif caminho == 2:
+
+            tem_ovo = caverna(tem_ovo)
+
+            if tem_ovo is None:
+                print("-" * 50)
+                print("VOCÊ MORREU!")
+                print("voltando para a tela inicial...")
+                print("-" * 50)
+                break
+
+        else:
+            print("não tem esse caminho!")
