@@ -48,9 +48,9 @@ def caverna(tem_ovo):
 
     return tem_ovo
 
-
 # INVENTÁRIO
 tem_ovo = False
+# INVENTÁRIO
 
 def ponte_em_um_penhasco(tem_ovo):
     print("-" * 50)
@@ -91,7 +91,7 @@ def acampamento_goblim():
     print("três goblins do acampamento passam por você segurando sacolas de dinheiro")
     print("1 - passa direto, ignorando-os")
     print("2 - pede dinheiro aos goblins")
-    print("3 - espancar um dos goblins e rouba a adaga dele")
+    print("3 - espanca um dos goblins e rouba a adaga dele")
     print("-" * 50)
     
     opcao = int(input("o que você vai fazer?: "))
@@ -136,7 +136,7 @@ def acampamento_goblim():
 
 
 def castelo():
-    print("ao chegar ao castelo, você ve guardas feridos!")
+    print("ao chegar ao castelo, você vê guardas feridos!")
     
     print("1 - entrar no castelo")
     print("2 - ajudar os guardas primeiro")
@@ -145,37 +145,49 @@ def castelo():
     print("-" * 50)
 
     if opcao == 1:
-        print("Você deixa os guardas de lado para ver o Rei primeiro!")
+        print("você deixa os guardas de lado para ver o Rei primeiro!")
         print("-" * 50)
 
     elif opcao == 2:
-        print("Você ajuda os guardas é entra no castelo")
+        print("você ajuda os guardas e entra no castelo")
         print("-" * 50)
 
     else:
         print("opção não encontrada!")
         return
 
-    print("Ao entrar na sala do trona o Rei te da uma missão")
-    print("A missão e, salvar a princesa no reino dos betas")
+    print("ao entrar na sala do trono, o Rei te dá uma missão")
+    print("a missão é salvar a princesa no reino dos Betas")
     print("-" * 50)
 
 def a_aventura_começa():
     print("com a missão dada")
     print("-" * 50)
     print("1 - salvar a princesa")
-    print("2 - ir para casa dormir por que o caminho  prara o castelo foi cansativo") 
-    opcao = int(input("o que você faz:"))
+    print("2 - ir para casa dormir porque o caminho para o castelo foi cansativo")
+    opcao = int(input("o que você faz: "))
     print("-" * 50)
 
     if opcao == 1:
-        print("É hora de salve a princesa")
+        print("é hora de salvar a princesa")
     
     elif opcao == 2:
-        print("to cansado vo para casa dormir")
+        print("tô cansado, vou para casa dormir")
         exit()
 
-#TELA INICIAL
+def a_cruzada_da_indecisão():
+    print("com a missão dada, você sai do castelo e vê a cruzada da indecisão")
+    print("1 - Um caminho que se diz menor e perigoso")
+    print("2 - Um caminho maior e menos perigoso")
+    opcao = int(input("qual caminho você escolhe: "))
+    print("-" * 50)
+
+    if opcao == 1:
+        print("")
+
+#(apagar depois)fazar a parte do trageto menor primeiro
+
+# TELA INICIAL
 while True:
 
     letreiro = """
@@ -246,6 +258,8 @@ if casa_do_heroi():
                 castelo()
                 
                 a_aventura_começa()
+
+                a_cruzada_da_indecisão()
 
         elif caminho == 2:
 
