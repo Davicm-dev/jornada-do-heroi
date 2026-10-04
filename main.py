@@ -177,15 +177,59 @@ def a_aventura_começa():
 
 def a_cruzada_da_indecisão():
     print("com a missão dada, você sai do castelo e vê a cruzada da indecisão")
-    print("1 - Um caminho que se diz menor e perigoso")
-    print("2 - Um caminho maior e menos perigoso")
+    print("1 - Um caminho que se diz menor e menos perigoso")
+    print("2 - Um caminho  que se diz maior e mais perigoso")
     opcao = int(input("qual caminho você escolhe: "))
     print("-" * 50)
 
     if opcao == 1:
-        print("")
+        caminho_que_se_diz_menor()
+        
+    elif opcao == 2:
+        caminho_que_se_diz_maior()
+        
+    else:
+        print("opção não encontrada!")
 
-#(apagar depois)fazar a parte do trageto menor primeiro
+def caminho_que_se_diz_menor():
+    print("-" * 50)
+    print("você escolheu o caminho menor e menos perigoso!")
+    print("de repente, você encontra uma ponte quebrada.")
+    print("você precisa encontrar uma maneira de atravessar.")
+    print("1 - procurar outro caminho")
+    print("2 - tentar consertar a ponte")
+
+    opcao = int(input("o que você faz?: "))
+
+    if opcao == 1:
+        print("você encontra uma passagem pela floresta.")
+
+    elif opcao == 2:
+        print("você consegue atravessar a ponte!")
+
+    else:
+        print("opção não encontrada!")
+
+def caminho_que_se_diz_maior():
+    print("-" * 50)
+    print("você escolheu o caminho maior e mais perigoso!")
+    print("depois de uma longa caminhada, você encontra uma pequena vila.")
+    print("os moradores podem ajudar você em sua missão.")
+    print("1 - pedir ajuda")
+    print("2 - seguir sozinho")
+
+    opcao = int(input("o que você faz?: "))
+
+    if opcao == 1:
+        print("um morador te mostra o caminho até o reino dos Betas.")
+
+    elif opcao == 2:
+        print("você decide seguir sozinho pela estrada.")
+
+    else:
+        print("opção não encontrada!")
+
+#(apagar depois)fazar a parte do trageto menor (2) primeiro
 
 # TELA INICIAL
 while True:
