@@ -262,6 +262,49 @@ def caminho_que_se_diz_menor():
         print("opção não encontrada!")
         return
 
+    # CONTINUAÇÃO DO CAMINHO MENOR
+    print("-" * 50)
+    print("depois de uma longa caminhada...")
+    print("você finalmente chega ao Reino dos Betas.")
+    print("as muralhas são enormes e os portões estão parcialmente destruídos.")
+    print("alguns soldados estão tentando proteger a entrada.")
+    print("-" * 50)
+
+    print("um soldado se aproxima e pergunta:")
+    print('"você veio ajudar o reino?"')
+    print("1 - sim, vim salvar a princesa")
+    print("2 - não, só estou de passagem")
+
+    opcao = int(input("o que você responde?: "))
+    print("-" * 50)
+
+    if opcao == 1:
+        print("o soldado fica aliviado.")
+        print('"então você chegou na hora certa!"')
+        print("ele conta que a princesa foi levada para uma torre abandonada.")
+        print("o soldado entrega uma chave para você.")
+        print("-" * 50)
+
+        print("você entra no reino segurando a chave.")
+        print("agora precisa encontrar a torre da princesa.")
+        print("-" * 50)
+
+        print("você vê dois caminhos dentro do reino:")
+        print("1 - seguir pela praça")
+        print("2 - passar pelo mercado")
+
+    elif opcao == 2:
+        print("o soldado desconfia de você.")
+        print('"então explique o que está fazendo aqui!"')
+        print("você conta sobre sua missão.")
+        print("o soldado deixa você entrar.")
+        print("-" * 50)
+
+        print("agora você precisa encontrar a torre da princesa.")
+
+    else:
+        print("opção não encontrada!")
+
 
 def caminho_que_se_diz_maior():
     print("-" * 50)
@@ -334,9 +377,52 @@ def caminho_que_se_diz_maior():
         print("opção não encontrada!")
         return
 
+    # CONTINUAÇÃO DO CAMINHO MAIOR
     print("depois de uma longa jornada...")
     print("você finalmente chega diante dos portões do Reino dos Betas!")
     print("-" * 50)
+
+    print("mas existe algo estranho...")
+    print("não há nenhum soldado protegendo a entrada.")
+    print("você entra no reino e encontra uma praça completamente vazia.")
+    print("-" * 50)
+
+    print("no chão existe uma espada quebrada e um pedaço de papel.")
+    print("no papel está escrito:")
+    print('"NÃO CONFIE EM NINGUÉM."')
+    print("-" * 50)
+
+    print("de repente, você escuta um barulho atrás de você.")
+    print("1 - virar para descobrir o que é")
+    print("2 - continuar correndo em direção ao castelo")
+
+    opcao = int(input("o que você faz?: "))
+    print("-" * 50)
+
+    if opcao == 1:
+        print("você se vira e encontra um soldado ferido.")
+        print("ele diz que sabe onde a princesa está.")
+        print("mas antes de contar, pede sua ajuda.")
+        print("-" * 50)
+
+        print("o soldado aponta para o castelo.")
+        print('"a princesa está sendo mantida lá dentro!"')
+        print("você decide seguir até o castelo.")
+        print("-" * 50)
+
+    elif opcao == 2:
+        print("você corre em direção ao castelo.")
+        print("as portas estão abertas.")
+        print("você entra lentamente.")
+        print("-" * 50)
+
+        print("dentro do castelo, você encontra três portas.")
+        print("você terá que descobrir qual delas leva até a princesa.")
+        print("-" * 50)
+
+    else:
+        print("opção não encontrada!")
+        return
 
 
 # TELA INICIAL
