@@ -11,7 +11,7 @@ def casa_do_heroi():
         print("vamos salvar o dia!")
         print("-" * 50)
         return True
-        
+
     elif opcao == 2:
         print("estou cansado, resolvo amanhã!")
         exit()
@@ -22,31 +22,36 @@ def casa_do_heroi():
 
 
 def caverna(tem_ovo):
-    print("-" * 50)
-    print("você encontrou uma caverna!")
-    print("na caverna tem um dragão!")
-    print("1 - enfrentar o dragão")
-    print("2 - pedir um ovo com gentileza")
-    print("3 - voltar")
-    print("-" * 50)
-
-    opcao = int(input("escolha: "))
-
-    if opcao == 1:
-        print("o dragão te devorou!")
-        print("você morreu!")
-        return None
-
-    elif opcao == 2:
-        print("o dragão te deu o ovo!")
+    while True:
         print("-" * 50)
-        tem_ovo = True
-
-    elif opcao == 3:
-        print("você voltou para a floresta")
+        print("você encontrou uma caverna!")
+        print("na caverna tem um dragão!")
+        print("1 - enfrentar o dragão")
+        print("2 - pedir um ovo com gentileza")
+        print("3 - voltar")
         print("-" * 50)
 
-    return tem_ovo
+        opcao = int(input("escolha: "))
+
+        if opcao == 1:
+            print("o dragão te devorou!")
+            print("você morreu!")
+            return None
+
+        elif opcao == 2:
+            print("o dragão te deu o ovo!")
+            print("-" * 50)
+            tem_ovo = True
+            return tem_ovo
+
+        elif opcao == 3:
+            print("você voltou para a floresta")
+            print("-" * 50)
+            return tem_ovo
+
+        else:
+            print("opção não encontrada!")
+            print("escolha novamente!")
 
 
 # INVENTÁRIO
@@ -201,21 +206,61 @@ def a_cruzada_da_indecisão():
 def caminho_que_se_diz_menor():
     print("-" * 50)
     print("você escolheu o caminho menor e menos perigoso!")
-    print("de repente, você encontra uma ponte quebrada.")
-    print("você precisa encontrar uma maneira de atravessar.")
+    print("depois de algum tempo caminhando, você encontra uma ponte quebrada.")
+    print("parece que será impossível atravessar.")
+    print("-" * 50)
+
     print("1 - procurar outro caminho")
     print("2 - tentar consertar a ponte")
 
     opcao = int(input("o que você faz?: "))
+    print("-" * 50)
 
     if opcao == 1:
-        print("você encontra uma passagem pela floresta.")
+        print("você decide procurar outro caminho.")
+        print("depois de alguns minutos, encontra uma trilha escondida.")
+        print("-" * 50)
+
+        print("a trilha leva até uma pequena casa.")
+        print("na frente da casa há um velho sentado.")
+        print("1 - falar com o velho")
+        print("2 - continuar pela trilha")
+
+        opcao = int(input("o que você faz?: "))
+        print("-" * 50)
+
+        if opcao == 1:
+            print("o velho pergunta para onde você está indo.")
+            print("você explica que precisa chegar ao Reino dos Betas.")
+            print("o velho aponta para uma estrada e diz:")
+            print('"siga por aquela estrada, ela levará até o reino."')
+            print("-" * 50)
+
+            print("você agradece ao velho e continua sua jornada.")
+
+        elif opcao == 2:
+            print("você ignora a casa e continua pela trilha.")
+            print("depois de algum tempo, a trilha termina em uma estrada.")
+            print("-" * 50)
+
+        else:
+            print("opção não encontrada!")
+            return
 
     elif opcao == 2:
-        print("você consegue atravessar a ponte!")
+        print("você decide tentar consertar a ponte.")
+        print("depois de algum esforço, consegue criar uma passagem.")
+        print("você atravessa a ponte com cuidado.")
+        print("-" * 50)
+        print("do outro lado, encontra uma placa:")
+        print('"Reino dos Betas →"')
+        print("-" * 50)
+
+        print("você segue pela estrada indicada.")
 
     else:
         print("opção não encontrada!")
+        return
 
 
 def caminho_que_se_diz_maior():
@@ -292,6 +337,7 @@ def caminho_que_se_diz_maior():
     print("depois de uma longa jornada...")
     print("você finalmente chega diante dos portões do Reino dos Betas!")
     print("-" * 50)
+
 
 # TELA INICIAL
 while True:
@@ -380,3 +426,4 @@ if casa_do_heroi():
 
         else:
             print("não tem esse caminho!")
+            print("escolha novamente!")
