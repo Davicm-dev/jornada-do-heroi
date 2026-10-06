@@ -1,4 +1,5 @@
 def casa_do_heroi():
+
     print("você acorda com uma notícia entregue por um soldado ferido do castelo")
     print("o castelo foi atacado!")
     print("1 - salvar o dia!")
@@ -22,7 +23,9 @@ def casa_do_heroi():
 
 
 def caverna(tem_ovo):
+
     while True:
+
         print("-" * 50)
         print("você encontrou uma caverna!")
         print("na caverna tem um dragão!")
@@ -55,11 +58,14 @@ def caverna(tem_ovo):
 
 
 # INVENTÁRIO
+
 tem_ovo = False
+
 # INVENTÁRIO
 
 
 def ponte_em_um_penhasco(tem_ovo):
+
     print("-" * 50)
     print("você encontrou uma ponte com um goblin protegendo-a!")
     print("ele pede um ovo de dragão para permitir a passagem!")
@@ -70,9 +76,11 @@ def ponte_em_um_penhasco(tem_ovo):
     opcao = int(input("escolha: "))
 
     if opcao == 1:
+
         if tem_ovo:
             print("você entregou o ovo de dragão para o goblin!")
             return True, tem_ovo
+
         else:
             print("você não tem um ovo de dragão!")
             return False, tem_ovo
@@ -88,12 +96,14 @@ def ponte_em_um_penhasco(tem_ovo):
 
 
 def depois_da_ponte():
+
     print("-" * 50)
     print("você passa pela ponte!")
     print("e encontra um acampamento de goblins!")
 
 
 def acampamento_goblim():
+
     print("-" * 50)
     print("três goblins do acampamento passam por você segurando sacolas de dinheiro")
     print("1 - passa direto, ignorando-os")
@@ -113,6 +123,7 @@ def acampamento_goblim():
         return False
 
     elif opcao == 3:
+
         print("você nocauteia um goblin e pega a adaga dele")
         print("-" * 50)
 
@@ -143,6 +154,7 @@ def acampamento_goblim():
 
 
 def castelo():
+
     print("ao chegar ao castelo, você vê guardas feridos!")
 
     print("1 - entrar no castelo")
@@ -169,6 +181,7 @@ def castelo():
 
 
 def a_aventura_começa():
+
     print("com a missão dada")
     print("-" * 50)
     print("1 - salvar a princesa")
@@ -186,6 +199,7 @@ def a_aventura_começa():
 
 
 def a_cruzada_da_indecisão():
+
     print("com a missão dada, você sai do castelo e vê a cruzada da indecisão")
     print("1 - Um caminho que se diz menor e menos perigoso")
     print("2 - Um caminho que se diz maior e mais perigoso")
@@ -204,6 +218,7 @@ def a_cruzada_da_indecisão():
 
 
 def caminho_que_se_diz_menor():
+
     print("-" * 50)
     print("você escolheu o caminho menor e menos perigoso!")
     print("depois de algum tempo caminhando, você encontra uma ponte quebrada.")
@@ -217,6 +232,7 @@ def caminho_que_se_diz_menor():
     print("-" * 50)
 
     if opcao == 1:
+
         print("você decide procurar outro caminho.")
         print("depois de alguns minutos, encontra uma trilha escondida.")
         print("-" * 50)
@@ -248,6 +264,7 @@ def caminho_que_se_diz_menor():
             return
 
     elif opcao == 2:
+
         print("você decide tentar consertar a ponte.")
         print("depois de algum esforço, consegue criar uma passagem.")
         print("você atravessa a ponte com cuidado.")
@@ -263,6 +280,7 @@ def caminho_que_se_diz_menor():
         return
 
     # CONTINUAÇÃO DO CAMINHO MENOR
+
     print("-" * 50)
     print("depois de uma longa caminhada...")
     print("você finalmente chega ao Reino dos Betas.")
@@ -279,6 +297,7 @@ def caminho_que_se_diz_menor():
     print("-" * 50)
 
     if opcao == 1:
+
         print("o soldado fica aliviado.")
         print('"então você chegou na hora certa!"')
         print("ele conta que a princesa foi levada para uma torre abandonada.")
@@ -292,8 +311,12 @@ def caminho_que_se_diz_menor():
         print("você vê dois caminhos dentro do reino:")
         print("1 - seguir pela praça")
         print("2 - passar pelo mercado")
+        print("-" * 50)
+
+        as_tres_portas()
 
     elif opcao == 2:
+
         print("o soldado desconfia de você.")
         print('"então explique o que está fazendo aqui!"')
         print("você conta sobre sua missão.")
@@ -301,12 +324,77 @@ def caminho_que_se_diz_menor():
         print("-" * 50)
 
         print("agora você precisa encontrar a torre da princesa.")
+        print("-" * 50)
+
+        as_tres_portas()
+
+    else:
+        print("opção não encontrada!")
+
+
+def as_tres_portas():
+
+    print("-" * 50)
+    print("você entra em uma parte mais profunda do castelo.")
+    print("na sua frente existem três portas.")
+    print("você precisa descobrir qual delas leva até a princesa.")
+    print("-" * 50)
+
+    print("1 - porta de madeira")
+    print("2 - porta de ferro")
+    print("3 - porta dourada")
+    print("-" * 50)
+
+    opcao = int(input("qual porta você escolhe?: "))
+    print("-" * 50)
+
+    if opcao == 1:
+
+        print("você abre a porta de madeira.")
+        print("a sala está vazia.")
+        print("você encontra uma passagem secreta.")
+        print("a passagem parece levar para uma torre.")
+
+    elif opcao == 2:
+
+        print("você abre a porta de ferro.")
+        print("dois guardas aparecem e bloqueiam sua passagem.")
+        print("1 - explicar que veio salvar a princesa")
+        print("2 - tentar passar escondido")
+        print("-" * 50)
+
+        opcao = int(input("o que você faz?: "))
+        print("-" * 50)
+
+        if opcao == 1:
+
+            print("você explica sua missão aos guardas.")
+            print("os guardas acreditam em você.")
+            print("eles apontam para a torre da princesa.")
+
+        elif opcao == 2:
+
+            print("você tenta passar escondido.")
+            print("um dos guardas percebe você.")
+            print("você precisa fugir para não ser capturado.")
+
+        else:
+            print("opção não encontrada!")
+
+    elif opcao == 3:
+
+        print("você abre a porta dourada.")
+        print("dentro da sala, você encontra a princesa!")
+        print('"finalmente alguém veio me salvar!"')
+        print("-" * 50)
+        print("você encontrou a princesa!")
 
     else:
         print("opção não encontrada!")
 
 
 def caminho_que_se_diz_maior():
+
     print("-" * 50)
     print("você escolheu o caminho maior e mais perigoso!")
     print("depois de horas caminhando, você encontra uma pequena vila.")
@@ -322,6 +410,7 @@ def caminho_que_se_diz_maior():
     print("-" * 50)
 
     if opcao == 1:
+
         print("o morador conta que várias pessoas desapareceram na estrada.")
         print("ele diz que ninguém sabe o que está causando os desaparecimentos.")
         print("antes de sair, ele entrega um mapa antigo.")
@@ -336,6 +425,7 @@ def caminho_que_se_diz_maior():
         print("-" * 50)
 
         if opcao == 1:
+
             print("você entra na floresta.")
             print("depois de alguns minutos, encontra uma cabana abandonada.")
             print("-" * 50)
@@ -350,6 +440,7 @@ def caminho_que_se_diz_maior():
             print("-" * 50)
 
         elif opcao == 2:
+
             print("você decide não entrar na floresta.")
             print("depois de caminhar bastante, encontra uma estrada antiga.")
             print("você segue por ela durante o resto do dia.")
@@ -360,6 +451,7 @@ def caminho_que_se_diz_maior():
             return
 
     elif opcao == 2:
+
         print("você decide continuar sozinho.")
         print("a estrada fica cada vez mais deserta.")
         print("de repente, você encontra uma carroça abandonada.")
@@ -378,6 +470,7 @@ def caminho_que_se_diz_maior():
         return
 
     # CONTINUAÇÃO DO CAMINHO MAIOR
+
     print("depois de uma longa jornada...")
     print("você finalmente chega diante dos portões do Reino dos Betas!")
     print("-" * 50)
@@ -400,6 +493,7 @@ def caminho_que_se_diz_maior():
     print("-" * 50)
 
     if opcao == 1:
+
         print("você se vira e encontra um soldado ferido.")
         print("ele diz que sabe onde a princesa está.")
         print("mas antes de contar, pede sua ajuda.")
@@ -410,15 +504,16 @@ def caminho_que_se_diz_maior():
         print("você decide seguir até o castelo.")
         print("-" * 50)
 
+        as_tres_portas()
+
     elif opcao == 2:
+
         print("você corre em direção ao castelo.")
         print("as portas estão abertas.")
         print("você entra lentamente.")
         print("-" * 50)
 
-        print("dentro do castelo, você encontra três portas.")
-        print("você terá que descobrir qual delas leva até a princesa.")
-        print("-" * 50)
+        as_tres_portas()
 
     else:
         print("opção não encontrada!")
@@ -426,6 +521,7 @@ def caminho_que_se_diz_maior():
 
 
 # TELA INICIAL
+
 while True:
 
     letreiro = """
@@ -452,20 +548,24 @@ while True:
     opcao = int(input("Escolha uma opção: "))
 
     if opcao == 1:
+
         print("carregando...")
         print("-" * 50)
         break
 
     elif opcao == 2:
+
         print("Obrigado por jogar!")
         break
 
     else:
+
         print("opção não encontrada!")
         continue
 
 
 # COMEÇA A AVENTURA
+
 if casa_do_heroi():
 
     while True:
@@ -482,11 +582,13 @@ if casa_do_heroi():
             passou, tem_ovo = ponte_em_um_penhasco(tem_ovo)
 
             if passou:
+
                 depois_da_ponte()
 
                 sobreviveu = acampamento_goblim()
 
                 if not sobreviveu:
+
                     print("-" * 50)
                     print("VOCÊ MORREU!")
                     print("voltando para a tela inicial...")
@@ -504,6 +606,7 @@ if casa_do_heroi():
             tem_ovo = caverna(tem_ovo)
 
             if tem_ovo is None:
+
                 print("-" * 50)
                 print("VOCÊ MORREU!")
                 print("voltando para a tela inicial...")
@@ -511,5 +614,6 @@ if casa_do_heroi():
                 break
 
         else:
+
             print("não tem esse caminho!")
             print("escolha novamente!")
